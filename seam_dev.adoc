@@ -1,0 +1,16 @@
+برای توسعه ماژول ها در چارچوب ایجاد شده باید نکات زیر را رعایت کرد . 
+
+* در لیست ها نباید conversation ای در page.xml ایجاد شود . در صورت لزوم ایجاد conversation  مانند لیست درختی ، باید بصورت زیر عمل کرد 
+
+[source, java]
+----
+    @Create
+    public void create()
+    {
+        ConversationManager.instance().startNewConversation();
+    }
+----
+
+[IMPORTANT]
+
+تمام کامپوننت های سیم *باید* کلاس _Serializable_ را implements کنند . ( برای موارد clustering ) 

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title>راهنمای فنی پروژه</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css" />
+
+
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>راهنمای فنی پروژه</h1>
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>این راهنما با هدف بهینه سازی توسعه  در چارچوب سیم ایجاد شده است .</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_توسعه_در_چارچوب_سیم">توسعه در چارچوب سیم</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>برای توسعه ماژول ها در چارچوب ایجاد شده باید نکات زیر را رعایت کرد .</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+در لیست ها نباید conversation ای در page.xml ایجاد شود . در صورت لزوم ایجاد conversation  مانند لیست درختی ، باید بصورت زیر عمل کرد
+</p>
+</li>
+</ul></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>    @Create
+    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">create</span></span><span style="color: #990000">()</span>
+    <span style="color: #FF0000">{</span>
+        ConversationManager<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">instance</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">startNewConversation</span></span><span style="color: #990000">();</span>
+    <span style="color: #FF0000">}</span></tt></pre></div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">تمام کامپوننت های سیم <strong>باید</strong> کلاس <em>Serializable</em> را implements کنند . ( برای موارد clustering )</td>
+</tr></table>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-07-29 11:45:11 IRDT
+</div>
+</div>
+</body>
+</html>
